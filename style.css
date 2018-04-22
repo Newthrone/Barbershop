@@ -1,0 +1,533 @@
+dd
+/*RESET*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+i_frame,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "PTSans Narrow";
+  src: url("/fonts/PTSansNarrowRegular/PTSansNarrow.eot");
+  src: url("/fonts/PTSansNarrowRegular/PTSansNarrow.eot?#iefix")format("embedded-opentype"), url("/fonts/PTSansNarrowRegular/PTSansNarrow.woff") format("woff"), url("/fonts/PTSansNarrowRegular/PTSansNarrow.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PTSans Narrow";
+  src: url("/fonts/PTSansNarrowBold/PTSansNarrowBold.eot");
+  src: url("/fonts/PTSansNarrowBold/PTSansNarrowBold.eot?#iefix")format("embedded-opentype"), url("/fonts/PTSansNarrowBold/PTSansNarrowBold.woff") format("woff"), url("/fonts/PTSansNarrowBold/PTSansNarrowBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+/*HEADER*/
+
+body {
+/*  background: #000 url("/Maket/background-main2.jpg") 50.2% 0% no-repeat;*/
+  background: #000 url("/Maket/background-main2.jpg") 50.2% 0% no-repeat;
+  font-family: 'PTSans Narrow', sans-serif;
+}
+
+.wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+header {
+  background: #000;
+  display: block;
+}
+
+.menu li {
+  float: left;
+  position: relative;
+}
+
+.menu li:nth-child(n+3){
+  padding-left: 2px;
+}
+
+.menu li:hover,
+menu li:active {
+  background-color: #242424;
+}
+
+header a {
+  font-family: 'PTSans Narrow', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 72px;
+  padding: 0 20.5px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+header ul.menu li.activ::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #fff;
+  bottom: 0px;
+  left: 20px;
+  right: 20px;
+  height: 4px;
+  z-index: 100;
+}
+
+.login {
+  float: right;
+}
+
+.login a {
+  padding: 0 22px 0 52px;
+  background: url(Maket/icon-login.png) 22% 50% no-repeat;
+}
+
+.login:active,
+.login:hover {
+  background-color: #242424;
+}
+
+.login:active a,
+.login:hover a {
+  background: url(Maket/icon-login_hover.png) 15% 50% no-repeat;
+}
+
+.promo {
+  display: flex;
+  justify-content: space-between;
+}
+
+img.logo {
+  display: block;
+  margin: 57px auto 0;
+  position: relative;
+  left: 5px;
+}
+
+.promo-block {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 26px;
+  color: #f7f4f1;
+  width: 300px;
+}
+
+.promo-block b {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 74px;
+  background: url(Maket/Diamond.svg) no-repeat center 66%;
+}
+
+.promo-block p {
+  margin-top: 1px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  padding: 0;
+}
+
+.content,
+.content-2 {
+  background: url(Maket/content-bg-line.png) no-repeat 49.9% 50%, #fff url(maket/content-bg.png);
+  margin-top: 79px;
+}
+
+.content-left,
+.content-right {
+  padding: 51px 80px 53px 80px;
+  max-width: 470px;
+}
+
+.content-left {
+  float: left;
+}
+
+.content-right {
+  float: right;
+  padding-left: 92px;
+}
+
+.content h2,
+.content-2 h2 {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.content p,
+.content-2 p {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.content time {
+  font-family: 'PTSans Narrow', sans-serif;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.content .content-left li:nth-child(2) {
+  display: block;
+  margin-top: 24px;
+}
+
+.btn {
+  display: inline-block;
+  width: 140px;
+  height: 43px;
+  font-size: 14px;
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.content .content-left a.btn {
+  margin-top: 29px;
+  margin-bottom: 2px;  
+  padding: 15px 0px 0px 35px;
+/*  140x43*/
+}
+
+.gallery {
+  min-width: 320px;
+}
+
+.gallery img {
+  margin: 7px 0 0 -2px;
+  border: 7px solid #fff;
+}
+
+.gallery .btn {
+  border: none;
+  margin-top: 34px;
+  margin-left: -2px;
+  padding: 13px 50px 12px 54px;
+  font-family: 'PTSans Narrow', sans-serif;
+    cursor: pointer;
+
+}
+
+.gallery .btn.gallery-next {
+  margin-left: 16px;
+  padding: 0px 0px 0px 4px;
+}
+
+.content-2 {
+  margin-top: 34px;
+}
+
+.content-2 .content-left, .content-2 .content-right {
+    padding-bottom: 62px;
+}
+
+.content-2 .content-left {
+  padding-right: 20px;
+}
+
+.content-2 .content-left p:last-child {
+  display: block;
+  margin-top: 24px;
+}
+
+.content-2 .content-left .btn {
+  margin-top: 45px;
+  padding: 15px 0px 0px 32px;  
+}
+
+.content-2 .content-left .btn:nth-child(even) {
+  margin-left: 16px;
+  padding: 15px 0px 0px 27px;
+}
+
+.form input {
+  margin: 27px 0px -8px -2px; 
+  padding-left: 15px;
+  height: 43px;
+  width: 140px;
+  border: 2px solid #000;
+  font-weight: bold;  
+  font-family: 'PTSans Narrow', sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form input:nth-child(odd) {
+  margin-left: 16px;
+}
+
+.form submit {
+  width: 300px;
+  box-sizing: border-box;
+  margin-top: 42px;
+  margin-left: -2px;
+  padding: 14px 0px 0px 114px;
+  cursor: pointer;
+}
+
+.form submit:hover {
+  cursor: pointer;
+}
+
+footer {
+  padding-top: 56px;
+  display: block;
+  min-height: 189px;
+  margin-top: 64px;
+  background: gray url('/MAKET/footer-bg.jpg');
+}
+
+.address, .social, .creators {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 88px;
+}
+
+.creators {
+  float: right;
+  margin-right: 0;
+}
+
+footer p, footer a {
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.social p {
+  text-align: center;
+}
+
+.social-icon{
+  margin-top: 15px;
+  margin-right: -6px;
+}
+
+.social a {
+  display: block;
+  float: left;
+  width: 43px;
+  height: 43px;
+  margin-right: 6px;
+}
+
+.vk {
+  background: #000 url('Maket/vk.jpg') ;
+}
+
+.f {
+  background: #000 url('Maket/f.jpg') ;
+}
+
+.inst {
+  background: #000 url('Maket/inst.jpg') ;
+}
+
+.creators p {
+  padding-left: 30px;
+}
+
+.creators a {
+  margin-top: 15px;
+  padding-top: 9px;
+  padding-left: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: table;
+}
