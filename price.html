@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Barbershop</title>
+  <link rel="stylesheet" href="style.css" type="text/css"/>
+  
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url( "img/320.png" );
+    }
+    /* Планшет */
+    @media ( min-width: 760px ) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url( "img/760.png" );
+      }
+    }
+    /* Десктоп */
+    @media ( min-width: 960px ) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url( "/PSD/barbershop-price%20%D1%81%D0%B2%D0%BE%D0%B5.jpg" );
+      }
+    }
+  </style>
+  <link href="../pixel-glass-js-master/styles.css" rel="stylesheet">
+  <script src="../pixel-glass-js-master/script.js"></script>
+</head>
+<body class="body-price">
+  <header class="clearfix">
+   <div class="wrapper">
+      <nav>
+       <ul class="menu">
+         <li><a href="/index.html"><img src="/Maket/logo.png" alt="logo"></a></li>
+         <li><a href="">информация</a></li>
+         <li><a href="">новости</a></li>
+         <li class="active"><span> прайс-лист </span></li>
+         <li ><a href="/shop.html">магазин</a></li>
+         <li><a href="">контакты</a></li>
+       </ul>         
+      </nav>
+      <div class="login"><a href=""> вход </a></div>
+   </div>
+  </header>
+  <div class="wrapper">
+    <h1 class="h1-price">прайс-лист</h1>
+    <section class="breadcrumbs">
+      <a href="/index.html">главная</a>
+      <span>прайс-лист</span>
+    </section>
+    <article>
+      <strong class="tittle">истинно мужская классика</strong>
+       <div class="flex">
+          <section class="flex-price">
+        <h3>мы используем только лучшие средства:</h3>
+        <ul>
+          <li>baxter of california</li>
+          <li>mr natty</li>
+          <li>suavecito</li>
+          <li>malin+goetz</li>
+        </ul>
+      </section>
+          <section class="flex-price">
+            <h3>цены на услуги наших мастеров:</h3>
+            <table>
+              <tr>
+                <td>стрижка</td>
+                <td>1500 &#8381</td>
+              </tr>
+              <tr>
+                <td>стрижка бороды</td>
+                <td>500 &#8381</td>
+              </tr>
+              <tr>
+                <td>накрутка усов</td>
+                <td>350 &#8381</td>
+              </tr>
+            </table>
+</section>
+       </div>
+          <section class="flex-price">
+            <h3>несколько слов о нас:</h3>
+            <div class="flex">
+          <p>Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
+        <p>Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!</p>
+        </div>
+          </section>
+       
+    </article>
+  </div>
+</body>
+</html>

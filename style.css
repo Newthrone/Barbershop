@@ -155,13 +155,17 @@ table {
 /*HEADER*/
 
 body {
-/*  background: #000 url("/Maket/background-main2.jpg") 50.2% 0% no-repeat;*/
-  background: #000 url("/Maket/background-main2.jpg") 50.2% 0% no-repeat;
   font-family: 'PTSans Narrow', sans-serif;
 }
 
+body.main {
+  background: #000 url("/Maket/background-main2.jpg") 50.2% 0% no-repeat;  
+}
+
 .wrapper {
-  max-width: 940px;
+  max-width: 960px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin: 0 auto;
 }
 
@@ -175,27 +179,32 @@ header {
   position: relative;
 }
 
-.menu li:nth-child(n+3){
-  padding-left: 2px;
-}
-
-.menu li:hover,
-menu li:active {
+.menu li:not(.active):hover,
+.menu li:not(.active):active {
   background-color: #242424;
 }
 
-header a {
+header a, header span {
   font-family: 'PTSans Narrow', sans-serif;
   font-weight: bold;
   font-size: 16px;
   line-height: 72px;
-  padding: 0 20.5px;
+  text-align: center;
+  padding: 28px 20.5px;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-header ul.menu li.activ::after {
+header span {
+  cursor: default;
+}
+
+.menu li:nth-child(n+4) a{
+  padding-left: 22.5px;
+}
+
+header li.active::after {
   content: "";
   display: block;
   position: absolute;
@@ -207,13 +216,29 @@ header ul.menu li.activ::after {
   z-index: 100;
 }
 
+.menu img {
+  vertical-align: middle;
+}
+
 .login {
   float: right;
 }
 
 .login a {
-  padding: 0 22px 0 52px;
-  background: url(Maket/icon-login.png) 22% 50% no-repeat;
+  padding: 28px 22px 28px 49px;
+  position: relative;
+}
+
+.login a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 16px;
+  left: 17px;
+  top: 39%;
+  background: url(Maket/iconlogin.png) 0% 0% no-repeat;
+  z-index: 5;
 }
 
 .login:active,
@@ -221,9 +246,9 @@ header ul.menu li.activ::after {
   background-color: #242424;
 }
 
-.login:active a,
-.login:hover a {
-  background: url(Maket/icon-login_hover.png) 15% 50% no-repeat;
+.login:active a::before,
+.login:hover a::before {
+  background: url(Maket/iconlogin.png) right no-repeat;
 }
 
 .promo {
@@ -266,7 +291,7 @@ img.logo {
 
 .content,
 .content-2 {
-  background: url(Maket/content-bg-line.png) no-repeat 49.9% 50%, #fff url(maket/content-bg.png);
+  background: url(Maket/content-bg-line.png) no-repeat 49.9% 50%, #fff url(Maket/content-bg.png) repeat;
   margin-top: 79px;
 }
 
@@ -308,7 +333,7 @@ img.logo {
   font-size: 14px;
 }
 
-.content .content-left li:nth-child(2) {
+.content .content-left li:nth-child(n+2) {
   display: block;
   margin-top: 24px;
 }
@@ -323,6 +348,11 @@ img.logo {
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
+  transition: background 0.5s linear;
+}
+
+.btn:hover {
+  background: #663d15;
 }
 
 .content .content-left a.btn {
@@ -347,7 +377,7 @@ img.logo {
   margin-left: -2px;
   padding: 13px 50px 12px 54px;
   font-family: 'PTSans Narrow', sans-serif;
-    cursor: pointer;
+  cursor: pointer;
 
 }
 
@@ -357,7 +387,8 @@ img.logo {
 }
 
 .content-2 {
-  margin-top: 34px;
+  margin-top: 34px;  
+  margin-bottom: 64px;
 }
 
 .content-2 .content-left, .content-2 .content-right {
@@ -395,6 +426,11 @@ img.logo {
   box-sizing: border-box;
 }
 
+.form input:focus {
+  border: 2px solid #663d15;
+  outline: none;
+}
+
 .form input:nth-child(odd) {
   margin-left: 16px;
 }
@@ -416,8 +452,7 @@ footer {
   padding-top: 56px;
   display: block;
   min-height: 189px;
-  margin-top: 64px;
-  background: gray url('/MAKET/footer-bg.jpg');
+  background: gray url("Maket/footer-bg.jpg") repeat;
 }
 
 .address, .social, .creators {
@@ -454,18 +489,35 @@ footer p, footer a {
   width: 43px;
   height: 43px;
   margin-right: 6px;
+  background: #000 url('Maket/social.png');
 }
 
-.vk {
-  background: #000 url('Maket/vk.jpg') ;
+.social a:hover {
+  background: #fff url('Maket/social.png') 0 100%;
 }
 
-.f {
-  background: #000 url('Maket/f.jpg') ;
+.social .vk {
+  background-position: 0 0;
 }
 
-.inst {
-  background: #000 url('Maket/inst.jpg') ;
+.social .vk:hover {
+  background-position: 0 100%;
+}
+
+.social .f {
+  background-position: 50% 0;
+}
+
+.social .f:hover {
+  background-position: 50% 100%;
+}
+
+.social .inst {
+  background-position: 100% 0;
+}
+
+.social .inst:hover {
+  background-position: 100% 100%;
 }
 
 .creators p {
@@ -476,6 +528,418 @@ footer p, footer a {
   margin-top: 15px;
   padding-top: 9px;
   padding-left: 24px;
+  transition: color 1s linear 0s, 
+              background 1s linear 0.1s;
+}
+
+.creators a:hover {  
+  color: #000;
+  background: #fff;  
+}
+
+                      /* ---------------
+                      BARBERSHOP-SHOP
+                      ------------------*/
+.body-shop,
+.body-item {
+  background: #fff url("/Maket/content-bg.png");
+  font-family: 'PTSans Narrow', sans-serif;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 42px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.shop h1 {
+  margin-top: 50px;
+}
+
+.breadcrumbs {
+  margin-top: 15px;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  position: relative;
+  margin-right: 25px;
+  margin-left: 7px;
+}
+
+.breadcrumbs a:nth-child(1) {
+  margin-left: 0;
+}
+
+.breadcrumbs a:after {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #000;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  position: absolute;
+  bottom: 4px;
+  right: -26px;
+  
+}
+
+.breadcrumbs span {
+  color: #aba9a7;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: 10px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.sorting {
+  width: 20%;
+}
+
+.producers {
+  margin-bottom: 32px;
+}
+
+.sorting legend {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 27px;
+}
+
+.sorting label {
+  display: flex;
+  margin-bottom: 17px; 
+  font-size: 0px;
+}
+
+.sorting input {
+  display: none;
+}
+
+
+
+.sorting .checkbox-custom,
+.sorting .radio-custom {
+  display: inline-block;
+  vertical-align: text-bottom;
+  box-sizing: border-box;
+  flex: 0 0 20px;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #000;
+  position: relative;
+  margin-right: 23px;
+}
+
+.checkbox:checked + .checkbox-custom::before {
+  content: "";
+  display: block;
+  width: 14px; 
+  height: 14px; 
+  margin-top: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
+  background: linear-gradient(to bottom, transparent 42%, #000 42%,                 #000 58%, transparent 58%), 
+              linear-gradient(to right, transparent 42%, #000 42%, #000 58%, transparent 58%);
+  transform: rotate(-45deg);
+}
+
+.sorting .label {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.sorting label:hover .label {
+  color: #663d15;
+}
+
+.categories label {
+  margin-bottom: 19px;
+}
+
+.categories label:last-of-type {
+  margin-bottom: 48px;
+}
+
+.sorting .radio-custom {  
+  border-radius: 50%;
+}
+
+.radio:checked + .radio-custom::before {
+  content: "";
+  display: block;
+  width: 14px; 
+  height: 14px; 
+  margin-top: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
+  background: radial-gradient(circle, #000 38%, transparent 40%);
+}
+
+.sorting .producers input:disabled ~ .label,
+.sorting .producers input:disabled ~ .checkbox-custom,
+.sorting .producers input:disabled ~ .radio-custom {
+  color: #aaa9a6;
+  border-color: #aaa9a6;
+}
+
+.sorting .btn {
+  box-sizing: border-box;
+  width: 112px;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 14px 0px 0px 34px;
+  cursor: pointer;
+}
+
+.products {
+  max-width: 700px;
+  padding-top: 5px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;  
+  margin-bottom: 24px;
+}
+
+.products:after {
+   content: "";
+   flex-basis: 31%;
+}
+
+.product {
+  background: #fff;
+  width: 220px;
+  display: flex;
+  flex-flow: column wrap;
+  margin:0 auto 20px;
+  box-shadow: 0 0 15px 0 rgba(0,1,1, 0.2);
+}
+
+.product-name {
+  margin-top: 10px;
+  padding: 0 16px;
+  color: #000;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.product-name span:last-child {
+  text-transform: uppercase;
+}
+
+.product-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 13px 17px 17px 16px;
+  height: 43px;
+  background: #e5e5e5;
+  font-weight: bold;
+}
+
+.product-price span {
+  margin: auto;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.product-price .btn {
+  width: 78px;
+  font-family: 'PTSans Narrow', sans-serif;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.paginator {
+  font-size: 0;  
+}
+
+.paginator a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 43px;
+  width: 43px;
+  margin-right: 7px;  
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.5s linear;
+}
+
+.paginator a.page-active {
+  background: #fff;
+  color: #000;
+  }
+
+.paginator a:hover {
+  background: #663d15;
+}
+
+                  /*-----------------
+                    BARBERSHOP-ITEM
+                  ------------------*/
+
+body.body-item,
+body.body-price {
+  background: #fff url(/Maket/content-bg.png); 
+}
+
+.h1-item,
+.h1-price {
+  margin-top: 50px;
+  margin-bottom: 17px;
+}
+
+.flex-item {
+  margin-bottom: 49px;
+}
+
+.item-photos {
+  margin-top: 6px;
+}
+
+.item-photos img {
+  box-shadow: 1px 1px 15px 0px rgba(0, 1, 1, 0.2);
+}
+
+.mini-photo {
+  margin-top: 19px;
+  font-size: 0;
+}
+
+.mini-photo a:nth-child(n+2) img {
+  margin-left: 20px
+}
+
+.item-specification {
+  margin-left: 90px;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'PTSans Narrow', sans-serif;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.spans  {
+  margin-top: 24px;
+}
+
+.span-one {
+  float: left;
+}
+
+.span-two {
+  float: right;
+  color: #aeaeae;
+}
+
+.item-specification p {
+  margin-top: 29px;
+}
+
+.item-specification .product-price {
+  margin: 36px 0 0 0;
+  width: 187px;
+}
+
+.item-specification h3 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 61px;
+}
+
+.item-specification ul {
+  margin-top: 28px;
+}
+
+.item-specification li {
+  position: relative;
+  padding-left: 14px;
+}
+
+.item-specification li:before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #000;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  position: relative;
+  left: -8px;
+}
+
+                  /*-----------------
+                    BARBERSHOP-PRICE
+                  ------------------*/
+
+body.body-price {
+  height: 5000px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tittle {
+  display: block;
+  font-size: 48px;
+  line-height: 48px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 45px;
+  position: relative;
+}
+
+.tittle:before,
+.tittle:after {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+}
+
+.tittle:after {
+  right: 0;
+}
+
+.body-price h3 {
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 
@@ -490,43 +954,7 @@ footer p, footer a {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.clearfix:after {
+.clearfix::after {
   content: "";
   clear: both;
   display: table;
