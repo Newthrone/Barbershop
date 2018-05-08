@@ -224,6 +224,7 @@ header li.active::after {
   float: right;
 }
 
+/*
 .login a {
   padding: 28px 22px 28px 49px;
   position: relative;
@@ -250,9 +251,53 @@ header li.active::after {
 .login:hover a::before {
   background: url(Maket/iconlogin.png) right no-repeat;
 }
+*/
+
+.login button {
+  display: inline;
+  pad ding: 28px 22px 28px 49px;
+  position: relative;
+  font-family: 'PTSans Narrow', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 72px;
+  text-align: center;
+  padding: 0px 20.5px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+}
+
+.login button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 16px;
+  left: 17px;
+  top: 39%;
+  background: url(Maket/iconlogin.png) 0% 0% no-repeat;
+  z-index: 5;
+}
+
+.login:active,
+.login:hover {
+  background-color: #242424;
+}
+
+.login:active button::before,
+.login:hover button::before {
+  background: url(Maket/iconlogin.png) right no-repeat;
+}
+
 
 .promo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -264,8 +309,13 @@ img.logo {
 }
 
 .promo-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-top: 26px;
   color: #f7f4f1;
@@ -348,6 +398,7 @@ img.logo {
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
+  -webkit-transition: background 0.5s linear;
   transition: background 0.5s linear;
 }
 
@@ -528,6 +579,8 @@ footer p, footer a {
   margin-top: 15px;
   padding-top: 9px;
   padding-left: 24px;
+  -webkit-transition: color 1s linear 0s, 
+              background 1s linear 0.1s;
   transition: color 1s linear 0s, 
               background 1s linear 0.1s;
 }
@@ -583,7 +636,9 @@ h1 {
   width: 7px;
   height: 7px;
   background: #000;
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
   transform-origin: 0 100%;
   position: absolute;
   bottom: 4px;
@@ -601,7 +656,11 @@ h1 {
 }
 
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -624,6 +683,8 @@ h1 {
 }
 
 .sorting label {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 17px; 
   font-size: 0px;
@@ -640,6 +701,8 @@ h1 {
   display: inline-block;
   vertical-align: text-bottom;
   box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20px;
   flex: 0 0 20px;
   height: 20px;
   width: 20px;
@@ -656,8 +719,11 @@ h1 {
   margin-top: 1px;
   margin-left: 1px;
   margin-right: 1px;
+  background: -webkit-linear-gradient(top, transparent 42%, #000 42%,                 #000 58%, transparent 58%), 
+              -webkit-linear-gradient(left, transparent 42%, #000 42%, #000 58%, transparent 58%);
   background: linear-gradient(to bottom, transparent 42%, #000 42%,                 #000 58%, transparent 58%), 
               linear-gradient(to right, transparent 42%, #000 42%, #000 58%, transparent 58%);
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -692,6 +758,7 @@ h1 {
   margin-top: 1px;
   margin-left: 1px;
   margin-right: 1px;
+  background: -webkit-radial-gradient(circle, #000 38%, transparent 40%);
   background: radial-gradient(circle, #000 38%, transparent 40%);
 }
 
@@ -714,21 +781,32 @@ h1 {
 .products {
   max-width: 700px;
   padding-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-flow: wrap;
   flex-flow: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;  
   margin-bottom: 24px;
 }
 
 .products:after {
    content: "";
+   -ms-flex-preferred-size: 31%;
    flex-basis: 31%;
 }
 
 .product {
   background: #fff;
   width: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
   flex-flow: column wrap;
   margin:0 auto 20px;
   box-shadow: 0 0 15px 0 rgba(0,1,1, 0.2);
@@ -749,7 +827,11 @@ h1 {
 }
 
 .product-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 13px 17px 17px 16px;
   height: 43px;
@@ -777,8 +859,14 @@ h1 {
 }
 
 .paginator a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 43px;
   width: 43px;
@@ -790,6 +878,7 @@ h1 {
   line-height: 18px;
   font-weight: bold;
   cursor: pointer;
+  -webkit-transition: background 0.5s linear;
   transition: background 0.5s linear;
 }
 
@@ -891,7 +980,9 @@ body.body-price {
   width: 7px;
   height: 7px;
   background: #000;
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
   transform-origin: 0 100%;
   position: relative;
   left: -8px;
@@ -945,9 +1036,37 @@ body.body-price {
 
 
 
+                                  /*-------------------------------
+                                    Всплывающая форма регистрации
+                                  ---------------------------------*/
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.8);
+}
 
+.modal-content {
+  background: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
 
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
 
 
