@@ -5,6 +5,34 @@
   <title>Barbershop</title>
   <link rel="stylesheet" href="style.css" type="text/css"/>
 <!--  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">-->
+  
+  
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url( "img/320.png" );
+    }
+    /* Планшет */
+    @media ( min-width: 760px ) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url( " /PSD/barbershop-index.jpg" );
+      }
+    }
+    /* Десктоп */
+    @media ( min-width: 960px ) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url( "/PSD/barbershop-index%20login-map.jpg" );
+      }
+    }
+  </style>
+  <link href="../pixel-glass-js-master/styles.css" rel="stylesheet">
+  <script src="../pixel-glass-js-master/script.js"></script>
+  
+  
 </head>
 <body class="main">
   <header class="clearfix">
@@ -20,12 +48,14 @@
        </ul>        
       </nav>
 <!--      <div class="login" id="myBtn"><a href="#" > вход </a></div>-->
-          <div class="login" id="myBtn"><button href="#" > вход </button></div>
+          <div class="login" id="myBtn">
+            <button href="#">вход</button>
+          </div>
    </div>
   </header>
   <div class="wrapper">
     <img class="logo" src="/Maket/BORODINSKI%20Logo.png" alt="LOGO" width="368px" height="204px">
-  <div class="promo wrapper">
+  <div class="promo">
     <div class="promo-block">
       <b>быстро</b>
       <p>МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДЕТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!</p>
@@ -39,13 +69,12 @@
       <p>НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ ОПРЕДЕЛЕНЫЙ СТАТУС?</p>
     </div>
     </div>
-  </div>
-  <div class="content wrapper clearfix">
-    <div class="content-left clearfix">
+  <div class="content clearfix">
+    <div class="content-left">
       <h2>Новости</h2>
       <ul>
         <li>
-          <p>НАМ НАКОНЕЦ ЗА5ВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ
+          <p>НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ
           </p>
           <time datetime="2017-09-25">25 сентября</time>
         </li>
@@ -68,7 +97,7 @@
       </div>
     </div>
   </div>
-  <div class="content-2 wrapper clearfix">
+  <div class="content-2 clearfix">
     <div class="content-left">
       <h2>контактная информация</h2>
       <adress>
@@ -80,7 +109,7 @@
            сб — вс: с 10:00 до 19:00
         </p>
       </adress>
-      <a href="#1" class="btn">как проехать</a>
+      <a href="#1" class="btn findme" id="finder">как проехать</a>
       <a href="#1" class="btn">обратная связь</a>
     </div>
     <div class="content-right">
@@ -95,12 +124,13 @@
       </form>
     </div>
   </div>
+  </div>
   <footer>
     <div class="wrapper">
       <div class="address">
         <p>барбершоп «БОРОДИНСКИЙ»</p>
         <p>адрес: г. санкт-петербург, ул. б. конюшенная, д. 19/8 </p>
-        <a href="#1">как нас найти?</a>
+        <a href="#1" class="findme2">как нас найти?</a>
         <p>телефон: +7 (495) 666-02-66</p>
     </div>
       <div class="social">
@@ -118,13 +148,35 @@
     </div>
     </div>
   </footer>
+  
 <!-- Всплывающая форма регистрации -->
+ 
   <div id="myModal" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>Модальное окно</p>
+      <h1>личный кабинет</h1>
+      <form action="">
+        <fieldset>
+          <legend>введите пожалуйста свой логин и пароль</legend>
+          <label><input type="text" value="логин" name="login" class="input-login"></label>
+          <label><input type="text" value="пароль" name="password" class="input-password"></label>
+          <label><input class="checkbox" type="checkbox" checked><span class="checkbox-custom"></span><span class="label">запомните меня</span></label>
+          <a href="#2" class="nomemory">я забыл пароль!</a>
+          <a href="#2" class="btn">войти</a>
+        </fieldset>
+      </form>
+      <span class="close">&times;</span>      
+    </div>
+  </div>
+  
+  <!-- Всплывающая карта -->
+  
+  <div id="modalMap" class="modalMap">
+    <div id="map" class="modal-map-content">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.5991032728616!2d30.3208946!3d59.9387942!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1526492859048" width="766" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <span class="closeMap">&times;</span>
     </div>
   </div>
   <script src="script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCme2qDD9pDNOT-cR44LWa-4f9JlI3vzLM"></script>
 </body>
 </html>

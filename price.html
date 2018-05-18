@@ -4,31 +4,7 @@
   <meta charset="UTF-8">
   <title>Barbershop</title>
   <link rel="stylesheet" href="style.css" type="text/css"/>
-  
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position:  50% 0;
-      /* По умолчанию показывается мобильный макет */
-      background-image: url( "img/320.png" );
-    }
-    /* Планшет */
-    @media ( min-width: 760px ) {
-      HTML {
-        /* Планшетный макет */
-        background-image: url( "img/760.png" );
-      }
-    }
-    /* Десктоп */
-    @media ( min-width: 960px ) {
-      HTML {
-        /* Десктопный макет */
-        background-image: url( "/PSD/barbershop-price%20%D1%81%D0%B2%D0%BE%D0%B5.jpg" );
-      }
-    }
-  </style>
-  <link href="../pixel-glass-js-master/styles.css" rel="stylesheet">
-  <script src="../pixel-glass-js-master/script.js"></script>
+
 </head>
 <body class="body-price">
   <header class="clearfix">
@@ -82,15 +58,50 @@
             </table>
           </section>
        </div>
-          <section class="flex-price">
+          <section class="about-us">
             <h3>несколько слов о нас:</h3>
             <div class="flex">
-          <p>Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
-        <p>Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!</p>
-        </div>
+               <p>Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас -это уникальная и продуманная до мелочей работа. Мы неработаем на количество, мы делаем качество.</p>
+               <p>Наша мастерская расположена в центре города,поэтому сделать стильную стрижку можно в любое время,даже в обеденный перерыв. Здесь вы можете погрузитьсяв удобную для вас атмосферу, чувствовать себякомфортно и свободно!</p>
+             </div>
           </section>
        
     </article>
   </div>
+  <footer>
+    <div class="wrapper">
+      <div class="address">
+        <p>барбершоп «БОРОДИНСКИЙ»</p>
+        <p>адрес: г. санкт-петербург, ул. б. конюшенная, д. 19/8 </p>
+        <a href="#1" class="findme2">как нас найти?</a>
+        <p>телефон: +7 (495) 666-02-66</p>
+    </div>
+      <div class="social">
+        <p>давайте дружить!</p>
+        <div class="social-icon">
+          <a href="#1" class="vk"></a>
+          <a href="#1" class="f"></a>
+          <a href="#1" class="inst"></a>
+<!--          <a href="#1" class="inst"></a> в задании написано предусмотреть дополнитьную соц. кнопку.-->
+        </div>
+    </div>
+      <div class="creators">
+      <p>разработано:</p>
+      <a href="#2" class="btn">htmlacademy.ru</a>
+    </div>
+    </div>
+  </footer>
+  
+  <!-- Всплывающая карта -->
+  
+  <div id="modalMap" class="modalMap">
+    <div id="map" class="modal-map-content">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.5991032728616!2d30.3208946!3d59.9387942!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1526492859048" width="766" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <span class="closeMap">&times;</span>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCme2qDD9pDNOT-cR44LWa-4f9JlI3vzLM"></script>
 </body>
+
 </html>
