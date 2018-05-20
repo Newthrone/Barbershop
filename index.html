@@ -5,34 +5,7 @@
   <title>Barbershop</title>
   <link rel="stylesheet" href="style.css" type="text/css"/>
 <!--  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">-->
-  
-  
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position:  50% 0;
-      /* По умолчанию показывается мобильный макет */
-      background-image: url( "img/320.png" );
-    }
-    /* Планшет */
-    @media ( min-width: 760px ) {
-      HTML {
-        /* Планшетный макет */
-        background-image: url( " /PSD/barbershop-index.jpg" );
-      }
-    }
-    /* Десктоп */
-    @media ( min-width: 960px ) {
-      HTML {
-        /* Десктопный макет */
-        background-image: url( "/PSD/barbershop-index%20login-map.jpg" );
-      }
-    }
-  </style>
-  <link href="../pixel-glass-js-master/styles.css" rel="stylesheet">
-  <script src="../pixel-glass-js-master/script.js"></script>
-  
-  
+    
 </head>
 <body class="main">
   <header class="clearfix">
@@ -90,10 +63,15 @@
       <h2>фотогалерея</h2>
       <div class="gallery">
         <figure>
-           <a href="#1"> <img src="/Maket/content_interier.jpg" alt="Интерьер" ></a>
+           <a href="#1" class="mySlides"> <img src="/Maket/content_interier.jpg" alt="Интерьер" width="286px" height="164px"></a>
+           <a href="#1" class="mySlides"> <img src="/Maket/1.jpg" alt="Интерьер2" width="286px" height="164px" ></a>
+           <a href="#1" class="mySlides"> <img src="/Maket/2.jpg" alt="Интерьер3" width="286px" height="164px"></a>
+           <a href="#1" class="mySlides"> <img src="/Maket/3.jpg" alt="Интерьер4" width="286px" height="164px"></a>
+           <a href="#1" class="mySlides"> <img src="/Maket/4.jpg" alt="Интерьер5" width="286px" height="164px"></a>
+           <a href="#1" class="mySlides"> <img src="/Maket/5.jpg" alt="Интерьер6" width="286px" height="164px"></a>
         </figure>
-        <button class="btn gallery-prev">назад</button>
-        <button class="btn gallery-next">вперед</button>
+        <button class="btn gallery-prev" onclick="plusSlides(-1)">назад</button>
+        <button class="btn gallery-next" onclick="plusSlides(1)">вперед</button>
       </div>
     </div>
   </div>
