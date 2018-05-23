@@ -88,6 +88,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -165,7 +166,7 @@ body {
 }
 
 body.main {
-  background: #000 url("/Maket/background-main2.jpg") 50.2% 0% no-repeat;  
+  background: #000 url("/Maket/background-main2.jpg") 50.2% 0% no-repeat;
 }
 
 .wrapper {
@@ -190,7 +191,8 @@ header {
   background-color: #242424;
 }
 
-header a, header span {
+header a,
+header span {
   font-family: 'PTSans Narrow', sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -206,7 +208,7 @@ header span {
   cursor: default;
 }
 
-.menu li:nth-child(n+4) a{
+.menu li:nth-child(n+4) a {
   padding-left: 22.5px;
 }
 
@@ -264,17 +266,15 @@ header li.active::after {
   outline: none;
 }
 
-
 .login:active button,
-.login:hover button{
-  background-color: #242424;  
+.login:hover button {
+  background-color: #242424;
 }
 
 .login:active button::before,
 .login:hover button::before {
   background: url(Maket/iconlogin.png) right no-repeat;
 }
-
 
 .promo {
   display: -webkit-box;
@@ -392,9 +392,9 @@ img.logo {
 
 .content .content-left a.btn {
   margin-top: 29px;
-  margin-bottom: 2px;  
+  margin-bottom: 2px;
   padding: 15px 0px 0px 35px;
-/*  140x43*/
+  /*  140x43*/
 }
 
 .gallery {
@@ -413,7 +413,6 @@ img.logo {
   padding: 13px 50px 12px 54px;
   font-family: 'PTSans Narrow', sans-serif;
   cursor: pointer;
-
 }
 
 .gallery .btn.gallery-next {
@@ -422,12 +421,13 @@ img.logo {
 }
 
 .content-2 {
-  margin-top: 34px;  
+  margin-top: 34px;
   margin-bottom: 64px;
 }
 
-.content-2 .content-left, .content-2 .content-right {
-    padding-bottom: 62px;
+.content-2 .content-left,
+.content-2 .content-right {
+  padding-bottom: 62px;
 }
 
 .content-2 .content-left {
@@ -441,7 +441,7 @@ img.logo {
 
 .content-2 .content-left .btn {
   margin-top: 45px;
-  padding: 15px 0px 0px 32px;  
+  padding: 15px 0px 0px 32px;
 }
 
 .content-2 .content-left .btn:nth-child(even) {
@@ -450,14 +450,15 @@ img.logo {
 }
 
 .form input {
-  margin: 27px 0px -8px -2px; 
+  margin: 27px 0px -8px -2px;
   padding-left: 15px;
   height: 43px;
   width: 140px;
   border: 2px solid #000;
-  font-weight: bold;  
+  font-weight: bold;
   font-family: 'PTSans Narrow', sans-serif;
   font-size: 14px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -472,6 +473,7 @@ img.logo {
 
 .form submit {
   width: 300px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-top: 42px;
   margin-left: -2px;
@@ -490,7 +492,9 @@ footer {
   background: gray url("Maket/footer-bg.jpg") repeat;
 }
 
-.address, .social, .creators {
+.address,
+.social,
+.creators {
   display: inline-block;
   vertical-align: top;
   margin-right: 88px;
@@ -501,7 +505,8 @@ footer {
   margin-right: 0;
 }
 
-footer p, footer a {
+footer p,
+footer a {
   color: #fff;
   font-size: 14px;
   line-height: 24px;
@@ -513,7 +518,7 @@ footer p, footer a {
   text-align: center;
 }
 
-.social-icon{
+.social-icon {
   margin-top: 15px;
   margin-right: -6px;
 }
@@ -563,16 +568,15 @@ footer p, footer a {
   margin-top: 15px;
   padding-top: 9px;
   padding-left: 24px;
-  -webkit-transition: color 1s linear 0s, 
-              background 1s linear 0.1s;
-  transition: color 1s linear 0s, 
-              background 1s linear 0.1s;
+  -webkit-transition: color 1s linear 0s, background 1s linear 0.1s;
+  transition: color 1s linear 0s, background 1s linear 0.1s;
 }
 
-.creators a:hover {  
+.creators a:hover {
   color: #000;
-  background: #fff;  
+  background: #fff;
 }
+
 
                                   /*-------------------------------
                                     Всплывающая форма регистрации
@@ -587,18 +591,18 @@ footer p, footer a {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
 }
 
-.modal-content {  
+.modal-content {
   position: relative;
   background: #fefefe;
-  margin: 120px auto;  
+  margin: 120px auto;
   padding: 45px 20px 20px 80px;
   width: 460px;
   height: 385px;
   background: #fff url(Maket/content-bg.png) repeat;
-  font-weight: bold;  
+  font-weight: bold;
   font-family: 'PTSans Narrow', sans-serif;
   font-size: 14px;
   text-transform: uppercase;
@@ -611,7 +615,7 @@ footer p, footer a {
 }
 
 .modal-content form {
-  width: 300px; 
+  width: 300px;
 }
 
 .modal-content legend {
@@ -625,33 +629,35 @@ footer p, footer a {
 }
 
 .modal-content input {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   height: 43px;
   border: 2px solid #000;
   margin-bottom: 9px;
-  font-weight: bold;  
+  font-weight: bold;
   font-family: 'PTSans Narrow', sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   padding-left: 15px;
 }
 
-.modal-content .input-login  {
+.modal-content .input-login {
   background: url(Maket/user.png) no-repeat 95% 50%;
 }
 
-.modal-content .input-password  {
+.modal-content .input-password {
   background: url(Maket/lock.png) no-repeat 95% 50%;
 }
 
-.modal-content input[type="checkbox"]  {
+.modal-content input[type="checkbox"] {
   display: none;
 }
 
 .modal-content .checkbox-custom {
   display: inline-block;
   vertical-align: text-bottom;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 20px;
@@ -670,7 +676,7 @@ footer p, footer a {
 
 .modal-content .btn {
   margin-top: 18px;
-  width: 100%;  
+  width: 100%;
   padding: 14px 0 0 128px;
 }
 
@@ -683,6 +689,7 @@ footer p, footer a {
   font-weight: bold;
   cursor: pointer;
 }
+
 
                                   /*-------------------------------
                                         Всплывающая карта
@@ -697,17 +704,17 @@ footer p, footer a {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
 }
 
-.modal-map-content {  
+.modal-map-content {
   position: relative;
   background: #fefefe;
   margin: 120px auto;
   padding: 7px;
   width: 780px;
   height: 574px;
-  font-weight: bold;  
+  font-weight: bold;
   font-family: 'PTSans Narrow', sans-serif;
   font-size: 14px;
   text-transform: uppercase;
@@ -724,9 +731,10 @@ footer p, footer a {
 }
 
 
-                      /* ---------------
+                    /* ---------------
                       BARBERSHOP-SHOP
                       ------------------*/
+
 .body-shop,
 .body-item {
   background: #fff url("/Maket/content-bg.png");
@@ -777,7 +785,6 @@ h1 {
   position: absolute;
   bottom: 4px;
   right: -26px;
-  
 }
 
 .breadcrumbs span {
@@ -820,7 +827,7 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 17px; 
+  margin-bottom: 17px;
   font-size: 0px;
 }
 
@@ -828,12 +835,11 @@ h1 {
   display: none;
 }
 
-
-
 .sorting .checkbox-custom,
 .sorting .radio-custom {
   display: inline-block;
   vertical-align: text-bottom;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 20px;
@@ -845,18 +851,16 @@ h1 {
   margin-right: 23px;
 }
 
-.checkbox:checked + .checkbox-custom::before {
+.checkbox:checked+.checkbox-custom::before {
   content: "";
   display: block;
-  width: 14px; 
-  height: 14px; 
+  width: 14px;
+  height: 14px;
   margin-top: 1px;
   margin-left: 1px;
   margin-right: 1px;
-  background: -webkit-linear-gradient(top, transparent 42%, #000 42%,                 #000 58%, transparent 58%), 
-              -webkit-linear-gradient(left, transparent 42%, #000 42%, #000 58%, transparent 58%);
-  background: linear-gradient(to bottom, transparent 42%, #000 42%,                 #000 58%, transparent 58%), 
-              linear-gradient(to right, transparent 42%, #000 42%, #000 58%, transparent 58%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(42%, transparent), color-stop(42%, #000), color-stop(58%, #000), color-stop(58%, transparent)), -webkit-gradient(linear, left top, right top, color-stop(42%, transparent), color-stop(42%, #000), color-stop(58%, #000), color-stop(58%, transparent));
+  background: linear-gradient(to bottom, transparent 42%, #000 42%, #000 58%, transparent 58%), linear-gradient(to right, transparent 42%, #000 42%, #000 58%, transparent 58%);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
@@ -880,30 +884,30 @@ h1 {
   margin-bottom: 48px;
 }
 
-.sorting .radio-custom {  
+.sorting .radio-custom {
   border-radius: 50%;
 }
 
-.radio:checked + .radio-custom::before {
+.radio:checked+.radio-custom::before {
   content: "";
   display: block;
-  width: 14px; 
-  height: 14px; 
+  width: 14px;
+  height: 14px;
   margin-top: 1px;
   margin-left: 1px;
   margin-right: 1px;
-  background: -webkit-radial-gradient(circle, #000 38%, transparent 40%);
   background: radial-gradient(circle, #000 38%, transparent 40%);
 }
 
-.sorting .producers input:disabled ~ .label,
-.sorting .producers input:disabled ~ .checkbox-custom,
-.sorting .producers input:disabled ~ .radio-custom {
+.sorting .producers input:disabled~.label,
+.sorting .producers input:disabled~.checkbox-custom,
+.sorting .producers input:disabled~.radio-custom {
   color: #aaa9a6;
   border-color: #aaa9a6;
 }
 
 .sorting .btn {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 112px;
   font-size: 13px;
@@ -922,14 +926,14 @@ h1 {
   flex-flow: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;  
+  justify-content: space-between;
   margin-bottom: 24px;
 }
 
 .products:after {
-   content: "";
-   -ms-flex-preferred-size: 31%;
-   flex-basis: 31%;
+  content: "";
+  -ms-flex-preferred-size: 31%;
+  flex-basis: 31%;
 }
 
 .product {
@@ -942,8 +946,9 @@ h1 {
   -webkit-box-direction: normal;
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
-  margin:0 auto 20px;
-  box-shadow: 0 0 15px 0 rgba(0,1,1, 0.2);
+  margin: 0 auto 20px;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
+  box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
 }
 
 .product-name {
@@ -989,7 +994,7 @@ h1 {
 }
 
 .paginator {
-  font-size: 0;  
+  font-size: 0;
 }
 
 .paginator a {
@@ -1004,7 +1009,7 @@ h1 {
   align-items: center;
   height: 43px;
   width: 43px;
-  margin-right: 7px;  
+  margin-right: 7px;
   background: #000;
   color: #fff;
   text-decoration: none;
@@ -1019,11 +1024,12 @@ h1 {
 .paginator a.page-active {
   background: #fff;
   color: #000;
-  }
+}
 
 .paginator a:hover {
   background: #663d15;
 }
+
 
                   /*-----------------
                     BARBERSHOP-ITEM
@@ -1031,7 +1037,7 @@ h1 {
 
 body.body-item,
 body.body-price {
-  background: #fff url(/Maket/content-bg.png); 
+  background: #fff url(/Maket/content-bg.png);
 }
 
 .h1-item,
@@ -1049,6 +1055,7 @@ body.body-price {
 }
 
 .item-photos img {
+  -webkit-box-shadow: 1px 1px 15px 0px rgba(0, 1, 1, 0.2);
   box-shadow: 1px 1px 15px 0px rgba(0, 1, 1, 0.2);
 }
 
@@ -1071,7 +1078,7 @@ body.body-price {
   text-transform: uppercase;
 }
 
-.spans  {
+.spans {
   margin-top: 24px;
 }
 
@@ -1122,6 +1129,7 @@ body.body-price {
   left: -8px;
 }
 
+
                   /*-----------------
                     BARBERSHOP-PRICE
                   ------------------*/
@@ -1165,7 +1173,7 @@ body.body-price {
 }
 
 .flex-price {
-  width: 49%;  
+  width: 49%;
 }
 
 .body-price h3 {
@@ -1196,14 +1204,16 @@ body.body-price {
   width: 7px;
   height: 7px;
   background: #000;
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
   transform-origin: 0 100%;
   position: relative;
   left: -8px;
 }
 
 .price-table table {
-   width: 100%;
+  width: 100%;
   margin-top: 33px;
   margin-left: 1px;
 }
@@ -1212,7 +1222,7 @@ body.body-price {
   border: 2px solid #000;
   width: 50%;
   height: 41px;
-  padding-left: 17px; 
+  padding-left: 17px;
   vertical-align: middle;
 }
 
@@ -1227,17 +1237,19 @@ body.body-price {
 
 .body-price .about-us .flex {
   margin-top: 27px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
 .about-us p {
-  width: 41%;  
+  width: 41%;
 }
 
 .about-us p:first-child {
   margin-right: 95px;
 }
 
-
-
-
+.fa.fa-rub {
+  font-size: 13px;
+}
