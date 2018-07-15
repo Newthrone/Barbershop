@@ -310,8 +310,23 @@ img.logo {
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
-  padding-bottom: 74px;
-  background: url(Maket/Diamond.svg) no-repeat center 66%;
+  padding-bottom: 44px;
+  margin-bottom: 30px;
+  position: relative;
+  
+}
+
+.promo-block b::after {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -10px;
+  transform: rotate(45deg);
 }
 
 .promo-block p {
