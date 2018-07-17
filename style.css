@@ -340,7 +340,7 @@ img.logo {
 
 .content,
 .content-2 {
-  background: url(Maket/content-bg-line.png) no-repeat 50% 50%, #fff url(Maket/content-bg.png) repeat;
+  background: url(Maket/content-bg-line.png) no-repeat 50% 50%, #f8f5f2 url(Maket/content-bg.png) repeat;
   margin-top: 79px;
 }
 
@@ -395,6 +395,9 @@ img.logo {
   text-decoration: none;
   background: #000;
   color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
   text-transform: uppercase;
   font-weight: bold;
   -webkit-transition: background 0.5s linear;
@@ -412,27 +415,29 @@ img.logo {
   /*  140x43*/
 }
 
-.gallery {
-  min-width: 320px;
+.gallery figure {
+  
 }
 
-.gallery img {
-  margin: 7px 0 0 -2px;
+.gallery img {  
+  display: block;
+  width: 300px;
+  height: 178px;
+  margin: 37px 0 0 -2px;
   border: 7px solid #fff;
+  background: #cccccc;
 }
 
 .gallery .btn {
-  border: none;
-  margin-top: 34px;
+  margin-top: 37px;
   margin-left: -2px;
   padding: 13px 50px 12px 54px;
   font-family: 'PTSans Narrow', sans-serif;
-  cursor: pointer;
+  
 }
 
 .gallery .btn.gallery-next {
   margin-left: 16px;
-  padding: 0px 0px 0px 4px;
 }
 
 .content-2 {
@@ -504,7 +509,7 @@ footer {
   padding-top: 56px;
   display: block;
   min-height: 189px;
-  background: gray url("Maket/footer-bg.jpg") repeat;
+  background: #232323 url("Maket/footer-bg.jpg") repeat;
 }
 
 .address,
@@ -545,6 +550,8 @@ footer a {
   height: 43px;
   margin-right: 6px;
   background: #000 url('Maket/social.png');
+  font-size: 0;
+  text-decoration: none;
 }
 
 .social a:hover {
